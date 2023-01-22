@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Azzara Bootstrap 4 Admin Dashboard</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="assets/img/icon.ico" type="image/x-icon"/>
+	
+	<!-- Fonts and icons -->
+	<script src="assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Open+Sans:300,400,600,700"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"], urls: ['assets/css/fonts.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/azzara.min.css">
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<link rel="stylesheet" href="assets/css/summernote-lite.css">
+	<link rel="stylesheet" href="assets/css/summernote-lite.min.css">
+	<style>
+		nav-link.active{box-shadow:0 2px 10px rgba(67,94,190,.5)}
+		.nav-tabs,.nav-tabs 
+		.nav-link{border:none}.nav-tabs
+	    .nav-link:hover{border:none;text-shadow:0 0 2px rgba(67,94,190,.3)}
+		.nav-tabs .nav-link.active{border:none;position:relative;color:#435ebe}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<!--
+				Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
+		-->
+		<div class="main-header" data-background-color="purple">
+			<!-- Logo Header -->
+			<div class="logo-header">
+				
+				<a href="index.html" class="logo">
+					<img src="assets/img/logoazzara.svg" alt="navbar brand" class="navbar-brand">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="fa fa-bars"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="fa fa-ellipsis-v"></i></button>
+				<div class="navbar-minimize">
+					<button class="btn btn-minimize btn-rounded">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+			</div>
+			<!-- End Logo Header -->
+
+			<!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg">
+				
+				<div class="container-fluid">
+					<div class="collapse" id="search-nav">
+						<form class="navbar-left navbar-form nav-search mr-md-3">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-search pr-1">
+										<i class="fa fa-search search-icon"></i>
+									</button>
+								</div>
+								<input type="text" placeholder="Search ..." class="form-control">
+							</div>
+						</form>
+					</div>
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item toggle-nav-search hidden-caret">
+							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
+								<i class="fa fa-search"></i>
+							</a>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-envelope"></i>
+							</a>
+							<ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
+								<li>
+									<div class="dropdown-title d-flex justify-content-between align-items-center">
+										Messages 									
+										<a href="#" class="small">Mark all as read</a>
+									</div>
+								</li>
+								<li>
+									<div class="message-notif-scroll scrollbar-outer">
+										<div class="notif-center">
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="assets/img/jm_denis.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Jimmy Denis</span>
+													<span class="block">
+														How are you ?
+													</span>
+													<span class="time">5 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="assets/img/chadengle.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Chad</span>
+													<span class="block">
+														Ok, Thanks !
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="assets/img/mlane.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Jhon Doe</span>
+													<span class="block">
+														Ready for the meeting today...
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="assets/img/talha.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Talha</span>
+													<span class="block">
+														Hi, Apa Kabar ?
+													</span>
+													<span class="time">17 minutes ago</span> 
+												</div>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-bell"></i>
+								<span class="notification">4</span>
+							</a>
+							<ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+								<li>
+									<div class="dropdown-title">You have 4 new notification</div>
+								</li>
+								<li>
+									<div class="notif-center">
+										<a href="#">
+											<div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i> </div>
+											<div class="notif-content">
+												<span class="block">
+													New user registered
+												</span>
+												<span class="time">5 minutes ago</span> 
+											</div>
+										</a>
+										<a href="#">
+											<div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
+											<div class="notif-content">
+												<span class="block">
+													Rahmad commented on Admin
+												</span>
+												<span class="time">12 minutes ago</span> 
+											</div>
+										</a>
+										<a href="#">
+											<div class="notif-img"> 
+												<img src="assets/img/profile2.jpg" alt="Img Profile">
+											</div>
+											<div class="notif-content">
+												<span class="block">
+													Reza send messages to you
+												</span>
+												<span class="time">12 minutes ago</span> 
+											</div>
+										</a>
+										<a href="#">
+											<div class="notif-icon notif-danger"> <i class="fa fa-heart"></i> </div>
+											<div class="notif-content">
+												<span class="block">
+													Farrah liked Admin
+												</span>
+												<span class="time">17 minutes ago</span> 
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+								<div class="avatar-sm">
+									<img src="assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+								</div>
+							</a>
+							<ul class="dropdown-menu dropdown-user animated fadeIn">
+								<li>
+									<div class="user-box">
+										<div class="avatar-lg"><img src="assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
+										<div class="u-text">
+											<h4>Hizrian</h4>
+											<p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">My Profile</a>
+									<a class="dropdown-item" href="#">My Balance</a>
+									<a class="dropdown-item" href="#">Inbox</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Account Setting</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Logout</a>
+								</li>
+							</ul>
+						</li>
+						
+					</ul>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			
+			<div class="sidebar-background"></div>
+			<div class="sidebar-wrapper scrollbar-inner">
+				<div class="sidebar-content">
+					<div class="user">
+						<div class="avatar-sm float-left mr-2">
+							<img src="assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+						</div>
+						<div class="info">
+							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									Hizrian
+									<span class="user-level">Administrator</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample">
+								<ul class="nav">
+									<li>
+										<a href="#profile">
+											<span class="link-collapse">My Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#edit">
+											<span class="link-collapse">Edit Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#settings">
+											<span class="link-collapse">Settings</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="nav">
+						<li class="nav-item">
+							<a href="index.html">
+								<i class="fas fa-home"></i>
+								<p>Dashboard</p>
+								<span class="badge badge-count">5</span>
+							</a>
+						</li>
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Components</h4>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#base">
+								<i class="fas fa-layer-group"></i>
+								<p>Base</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="base">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="components/avatars.html">
+											<span class="sub-item">Avatars</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/buttons.html">
+											<span class="sub-item">Buttons</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/gridsystem.html">
+											<span class="sub-item">Grid System</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/panels.html">
+											<span class="sub-item">Panels</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/notifications.html">
+											<span class="sub-item">Notifications</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/sweetalert.html">
+											<span class="sub-item">Sweet Alert</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/font-awesome-icons.html">
+											<span class="sub-item">Font Awesome Icons</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/flaticons.html">
+											<span class="sub-item">Flaticons</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/typography.html">
+											<span class="sub-item">Typography</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#forms">
+								<i class="fas fa-pen-square"></i>
+								<p>Forms</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="forms">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="forms/forms.html">
+											<span class="sub-item">Basic Form</span>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#tables">
+								<i class="fas fa-table"></i>
+								<p>Tables</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="tables">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="tables/tables.html">
+											<span class="sub-item">Basic Table</span>
+										</a>
+									</li>
+									<li>
+										<a href="tables/datatables.html">
+											<span class="sub-item">Datatables</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#maps">
+								<i class="fas fa-map-marker-alt"></i>
+								<p>Maps</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="maps">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="maps/googlemaps.html">
+											<span class="sub-item">Google Maps</span>
+										</a>
+									</li>
+									<li>
+										<a href="maps/fullscreenmaps.html">
+											<span class="sub-item">Full Screen Maps</span>
+										</a>
+									</li>
+									<li>
+										<a href="maps/jqvmap.html">
+											<span class="sub-item">JQVMap</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#charts">
+								<i class="far fa-chart-bar"></i>
+								<p>Charts</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="charts">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="charts/charts.html">
+											<span class="sub-item">Chart Js</span>
+										</a>
+									</li>
+									<li>
+										<a href="charts/sparkline.html">
+											<span class="sub-item">Sparkline</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						
+						<li class="nav-item">
+							<a href="widgets.html">
+								<i class="fas fa-desktop"></i>
+								<p>Widgets</p>
+								<span class="badge badge-count badge-success">4</span>
+							</a>
+						</li>
+						<li class="nav-item active submenu">
+							<a data-toggle="collapse" href="#custompages">
+								<i class="fas fa-paint-roller"></i>
+								<p>Custom Pages</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse show" id="custompages">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="login.html">
+											<span class="sub-item">Login & Register 1</span>
+										</a>
+									</li>
+									<li>
+										<a href="login2.html">
+											<span class="sub-item">Login & Register 2</span>
+										</a>
+									</li>
+									<li class="active">
+										<a href="userprofile.html">
+											<span class="sub-item">User Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="404.html">
+											<span class="sub-item">404</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#submenu">
+								<i class="fas fa-bars"></i>
+								<p>Menu Levels</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="submenu">
+								<ul class="nav nav-collapse">
+									<li>
+										<a data-toggle="collapse" href="#subnav1">
+											<span class="sub-item">Level 1</span>
+											<span class="caret"></span>
+										</a>
+										<div class="collapse" id="subnav1">
+											<ul class="nav nav-collapse subnav">
+												<li>
+													<a href="#">
+														<span class="sub-item">Level 2</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="sub-item">Level 2</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a data-toggle="collapse" href="#subnav2">
+											<span class="sub-item">Level 1</span>
+											<span class="caret"></span>
+										</a>
+										<div class="collapse" id="subnav2">
+											<ul class="nav nav-collapse subnav">
+												<li>
+													<a href="#">
+														<span class="sub-item">Level 2</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#">
+											<span class="sub-item">Level 1</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+		<div class="main-panel">
+			<div class="content">
+				<div class="page-inner">
+					<h4 class="page-title">Perfil</h4>
+					<div class="row">
+						
+						<div class="col-md-12">
+							<div class="card card-profile card-secondary">
+								<div class="card-header" style="background-image: url('assets/img/blogpost.jpg')">
+									<div class="profile-picture">
+										<div class="avatar avatar-xl">
+											<img src="assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+										</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="user-profile text-center">
+										<div class="name">Jovane dos Santos</div>
+										<div class="job">Web Fullstack</div>
+										<div class="desc">Dispenso apresentações
+										</div>
+										<div class="social-media">
+											<a class="btn btn-info btn-twitter btn-sm btn-link" href="#"> 
+												<span class="btn-label just-icon"><i class="flaticon-twitter"></i> </span>
+											</a>
+											<a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#"> 
+												<span class="btn-label just-icon"><i class="flaticon-google-plus"></i> </span> 
+											</a>
+											<a class="btn btn-primary btn-sm btn-link" rel="publisher" href="#"> 
+												<span class="btn-label just-icon"><i class="flaticon-facebook"></i> </span> 
+											</a>
+											<a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#"> 
+												<span class="btn-label just-icon"><i class="flaticon-dribbble"></i> </span> 
+											</a>
+										</div>										
+									</div>
+								</div>
+								<div class="card-footer">
+									<div class="row user-stats text-center">
+										<div class="col">
+											<div class="view-profile text-center number">
+												
+											</div>
+											<div class="title"></div>												
+										</div>
+										<div class="col">
+											<div class="view-profile text-center number">
+												
+											</div>
+										</div>
+										<div class="col">
+											<div class="view-profile text-center number">
+											
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">Horizontal Navs</h5>
+								</div>
+								<div class="card-body">
+									<ul class="nav nav-tabs" id="myTab" role="tablist">
+										<li class="nav-item" role="presentation">
+											<a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home"
+												role="tab" aria-controls="home" aria-selected="true"><button class="btn btn-primary btn-border">Dados Pessoas</button></a>
+										</li>
+										<li class="nav-item" role="presentation">
+											<a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile"
+												role="tab" aria-controls="profile" aria-selected="false"><button class="btn btn-primary btn-border">Documentos</button></a>
+										</li>
+										<li class="nav-item" role="presentation">
+											<a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact"
+												role="tab" aria-controls="contact" aria-selected="false"><button class="btn btn-primary btn-border">Férias e faltas</button></a>
+										</li>
+										<li class="nav-item" role="presentation">
+											<a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact"
+												role="tab" aria-controls="contact" aria-selected="false"><button class="btn btn-primary btn-border">Vencimentos</button></a>
+										</li>
+										<li class="nav-item" role="presentation">
+											<a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact"
+												role="tab" aria-controls="contact" aria-selected="false"><button class="btn btn-primary btn-border">Horas extras</button></a>
+										</li>
+										<li class="nav-item" role="presentation">
+											<a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact"
+												role="tab" aria-controls="contact" aria-selected="false"><button class="btn btn-primary btn-border">Contrato</button></a>
+										</li>
+										<li class="nav-item" role="presentation">
+											<a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact"
+												role="tab" aria-controls="contact" aria-selected="false"><button class="btn btn-primary btn-border">Benficios</button></a>
+										</li>
+										
+									</ul>
+									<div class="tab-content" id="myTabContent">
+										<div class="tab-pane fade show active" id="home" role="tabpanel"
+											aria-labelledby="home-tab">
+											<div class="card-body">
+												<div class="row mt-3">
+													<div class="col-md-6">
+														<div class="input-group animated zoomInDown">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																<i class="fa fa-user"></i>
+																</span>
+															</div>
+															<input type="text" class="form-control" placeholder="Nome">
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="input-group animated zoomInDown">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																<i class="fa fa-envelope"></i>
+																</span>
+															</div>
+															<input type="text" class="form-control" placeholder="Email">
+														</div>
+													</div>
+												</div>
+												<div class="row mt-3">
+													<div class="col-md-4">
+														<div class="input-group animated zoomInDown">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	Data de Nascimento
+																</span>
+															</div>
+															<input type="date" class="form-control" placeholder="">
+														</div>	
+													</div>
+													<div class="col-md-4">													
+														<div class="form-group form-floating-label animated zoomInDown">
+															<select class="form-control" required="">
+																<option></option>
+																<option>Masculino</option>
+																<option>Femenino</option>																
+															</select>
+															<label for="selectFloatingLabel2" class="placeholder">Sexo</label>
+														</div>														
+													</div>
+													<div class="col-md-4">
+														<div class="input-group animated zoomInDown">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																<i class="fa fa-phone"></i>
+																</span>
+															</div>
+															<input type="text" class="form-control" placeholder="Nº de telefone">
+														</div>
+													</div>
+												</div>
+												<div class="row mt-3">
+													<div class="col-md-6">
+														<div class="input-group animated zoomInDown">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																<i class="fa fa-map-marker-alt"></i>
+																</span>
+															</div>
+															<input type="text" class="form-control" placeholder="Endereço da empresa">
+														</div>														
+													</div>
+													<div class="col-md-6">
+														<div class="input-group animated zoomInDown">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																<i class="fa fa-map-marker-alt"></i>
+																</span>
+															</div>
+															<input type="text" class="form-control" placeholder="Nacionalidade">
+														</div>														
+													</div>
+												</div>
+												<div class="row mt-4">
+													<div class="col-md-6">
+														<div class="input-group animated zoomInDown">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																<i class="fa fa-map-marker-alt"></i>
+																</span>
+															</div>
+															<input type="text" class="form-control" placeholder="País">
+														</div>														
+													</div>
+													<div class="col-md-6">
+														<div class="form-group form-floating-label animated zoomInDown">
+															<select class="form-control" required="">
+																<option></option>
+																<option>Solteiro</option>
+																<option>Casado</option>																
+															</select>
+															<label for="selectFloatingLabel2" class="placeholder">Estado Civil</label>
+														</div>	
+													</div>
+												</div>
+												
+												<div class="row">
+													<div class="col-md-3">
+														<div class="form-group form-floating-label animated zoomInDown">
+															<select class="form-control" required="">
+																<option></option>
+																<option>Validado</option>
+																<option>Recusado</option>																
+															</select>
+															<label for="selectFloatingLabel2" class="placeholder">Estado</label>
+														</div>													
+													</div>
+													<div class="col-md-6">
+														<div class="input-group animated zoomInDown">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																<i class="fa fa-map-marker-alt"></i>
+																</span>
+															</div>
+															<input type="text" class="form-control" placeholder="Situação">
+														</div>														
+													</div>
+													<div class="col-md-3">
+														<div class="input-group animated zoomInDown">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	Data situação
+																</span>
+															</div>
+															<input type="date" class="form-control" placeholder="Data situação">
+														</div>														
+													</div>
+												</div>
+												<div class="text-right mt-3 mb-3">
+													<a href="#" id="alert_demo_3_3"></a>
+													<button class="btn btn-success">Salvar</button></a>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="profile" role="tabpanel"
+											aria-labelledby="profile-tab">
+																			
+									
+											<div class="container">
+												<div class="bd-example">
+													<h2 id="addrow" class="mt-4 p-4">Meus Documentos</h2>
+
+													<!-- Button -->
+													<div class="d-flex">
+														<button class="btn btn-primary btn-round ml-auto mb-3" data-toggle="modal" data-target="#addRowModal">
+															<i class="fa fa-plus"></i>
+															Cadastrar  Documentos
+														</button>
+													</div>
+
+													<!-- Modal -->
+													<div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+														<div class="modal-dialog" role="document">
+															<div class="modal-content">
+																<div class="modal-header no-bd">
+																	<h2 class="fw-bold"></h2>
+																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																		<span aria-hidden="true">&times;</span>
+																	</button>
+																</div>
+																<div class="modal-body">
+																	<form role="form">
+																		<div class="row">
+																			<div class="col-sm-12">
+																				<div class="form-group form-group-default">
+																					<label>Nome</label>
+																					<input id="addName" type="text" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																			<div class="col-md-6 pr-0">
+																				<div class="form-group form-group-default">
+																					<label>Email</label>
+																					<input id="addPosition" type="text" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																			<div class="col-md-6">
+																				<div class="form-group form-group-default">
+																					<label>Telefone</label>
+																					<input id="addOffice" type="text" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																			<div class="col-md-12">
+																				<div class="form-group form-group-default">
+																					<label>Endereço</label>
+																					<input id="addOffice" type="text" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																			<div class="col-md-6">
+																				<div class="form-group form-group-default">
+																					<label>Cargo</label>
+																					<input id="addOffice" type="text" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																			<div class="col-md-6">
+																				<div class="form-group form-group-default">
+																					<label>Departamento</label>
+																					<select name="departamento" id="departamento" class="form-control">
+																						<option value="">Dep. Financeiro</option>
+																						<option value="">Dep. Marketing</option>
+																						<option value="">Dep. Administrativo</option>
+																						<option value="">Dep. Operativo</option>
+																						<option value="">Dep. Gestão</option>
+																						<option value="">Dep. Mecânica</option>
+																						<option value="">Dep. Tecnologia de Informação</option>
+																					</select>
+																				</div>
+																			</div>
+																			<div class="col-md-6">
+																				<div class="form-group form-group-default">
+																					<label>Hora de Entrada</label>
+																					<input id="addOffice" type="time" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																			<div class="col-md-6">
+																				<div class="form-group form-group-default">
+																					<label>Hora de Saida</label>
+																					<input id="addOffice" type="time" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																		</div>
+																	</form>
+																</div>
+																<div class="modal-footer no-bd">
+																	<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+																	<button type="button" id="alert_demo_3_3" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="table-responsive">
+														<table id="add-row" class="display table table-striped table-hover" cellspacing="0" width="100%">
+															<thead>
+																<tr>
+																	<th>ficheiro</th>
+																	<th>Nome</th>
+																	<th>Tipo do Documento</th>
+																	<th>Nº do Documento</th>
+																	<th>Estado</th>
+																	<th>Operações</th>
+																	<th width="10%">Data de Validade</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td><div class="avatar avatar-online"><img src="assets/img/profile.jpg" style="width: 7vh; height: 7vh; object-fit: cover; object-position: center; border-radius: 50%;"></div></td>
+																	<td>B. Identidade</td>
+																	<td>Registro</td>
+																	<td>022</td>
+																	<td><span class="text-success"><select name="" id="" class="form-control"><option value="1">Validar</option></select></span></td>
+																	<td>
+																		<div class="form-button-action">
+																			<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-simple-primary btn-lg" data-original-title="Editar">
+																				<i class="fa fa-edit text-warning"></i>
+																			</button>
+																			<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-simple-primary" data-original-title="visualizar">
+																				<i class="fa fa-eye text-info"></i>
+																			</button>
+																			<a href="#" id="alert_demo_7"><button type="button" data-toggle="tooltip" title=""  class="btn btn-link btn-simple-danger" data-original-title="Remover">
+																				<i class="fa fa-trash text-danger"></i>
+																			</button></a>
+																		</div>
+																	</td>
+																	<td>22/01/2023</td>
+																</tr>																																
+														</tbody>
+														</table>
+													</div>
+												</div>
+											</div>															
+										<div class="tab-pane fade" id="contact" role="tabpanel"
+											aria-labelledby="contact-tab">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="card mt-5 ms-2 animated zoomInDown border border-1" style="padding:0px !important;">
+														<div class="card-header text-center" style="color:black !important;">
+															Resumo sobre ferias
+														</div>
+														<div class="card-body">
+															<div class="row">
+																   <div class="col-md-4 text-center bg-success text-white" style=" padding-top: 10px; padding-bottom: 10px;border: 1px solid #1c1c1c; border-left: none; border-top: none; border-bottom: none;">
+																   <span>0</span><br>Usufruidas</div>
+																   <div class="col-md-4 text-center bg-danger text-white" style=" padding-top: 10px; padding-bottom: 10px; border: 1px solid #1c1c1c; border-left: none; border-top: none; border-bottom: none;"><span>10</span><br>Marcadas</div>
+																   <div class="col-md-4 text-center bg-danger text-white" style="padding-top: 10px; padding-bottom: 10px;"><span>20</span><br> Limite</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="card mt-5 ms-2 animated zoomInDown border border-1" style="padding-top:0px !important;">
+														<div class="card-header text-center" style="color:black !important;">
+															Resumo sobre Faltas
+														</div>
+														<div class="card-body">
+															<div class="row">
+																<div class="col-md-4 text-center bg-warning text-white" style=" padding-top: 10px; padding-bottom: 10px;border: 1px solid #1c1c1c; border-left: none; border-top: none; border-bottom: none;">
+																<span>0</span><br>Justificadas</div>
+																<div class="col-md-4 text-center bg-warning text-white" style=" padding-top: 10px; padding-bottom: 10px; border: 1px solid #1c1c1c; border-left: none; border-top: none; border-bottom: none;"><span>10</span><br>Não Justificadas</div>
+																<div class="col-md-4 text-center bg-warning text-white" style="padding-top: 10px; padding-bottom: 10px;"><span>20</span><br> Total</div>
+														 </div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="container">
+												<div class="bd-example animated zoomInDown">
+								
+													<!-- Button -->
+													<div class="d-flex">
+														<h2 id="addrow" class="mt-4 p-4">Minhas Faltas</h2>
+														<select class="col-2 form-control ml-auto mb-3" style="height: 50px; margin-top: 35px;">
+															<option value="2020">2020</option>
+															<option value="2021">2021</option>
+															<option value="2022">2022</option>
+															<option value="2023">2023</option>
+														</select>
+													</div>
+								
+													<div class="table-responsive">
+														<table id="add-row" class="display table table-striped table-hover" cellspacing="0" width="100%">
+															<thead>
+																<tr>
+																	<th>Mês de</th>
+																	<th>Dia 01</th>
+																	<th>Dia 02</th>
+																	<th>Dia 03</th>
+																	<th>Dia 04</th>
+																	<th>Dia 05</th>
+																	<th>Dia 06</th>
+																	<th>Dia 07</th>
+																	<th>Dia 08</th>
+																	<th>Dia 09</th>
+																	<th>Dia 10</th>
+																	<th>Dia 11</th>
+																	<th>Dia 12</th>
+																	<th>Dia 13</th>
+																	<th>Dia 14</th>
+																	<th>Dia 15</th>
+																	<th>Dia 16</th>
+																	<th>Dia 17</th>
+																	<th>Dia 18</th>
+																	<th>Dia 19</th>
+																	<th>Dia 20</th>
+																	<th>Dia 21</th>
+																	<th>Dia 22</th>
+																	<th>Dia 23</th>
+																	<th>Dia 24</th>
+																	<th>Dia 25</th>
+																	<th>Dia 26</th>
+																	<th>Dia 27</th>
+																	<th>Dia 28</th>
+																	<th>Dia 29</th>
+																	<th>Dia 30</th>
+																	<th>Dia 31</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td><span class="text-dark fw-bold">Janeiro</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Fevereiro</span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Março</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Abril</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Maio</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Junho</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Julho</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Agosto</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Setembro</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Outubro</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Novembro</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+																<tr>
+																	<td><span class="text-dark fw-bold">Dezembro</span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-danger"><i class="fa fa-circle"></i></span></td>
+																	<td><span class="text-success"><i class="fa fa-circle"></i></span></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<!-- Custom template | don't include it in your project! -->
+		<div class="custom-template">
+				<div class="title">Settings</div>
+				<div class="custom-content">
+					<div class="switcher">
+						<div class="switch-block">
+							<h4>Topbar</h4>
+							<div class="btnSwitch">
+								<button type="button" class="changeMainHeaderColor" data-color="blue"></button>
+								<button type="button" class="selected changeMainHeaderColor" data-color="purple"></button>
+								<button type="button" class="changeMainHeaderColor" data-color="light-blue"></button>
+								<button type="button" class="changeMainHeaderColor" data-color="green"></button>
+								<button type="button" class="changeMainHeaderColor" data-color="orange"></button>
+								<button type="button" class="changeMainHeaderColor" data-color="red"></button>
+							</div>
+						</div>
+						<div class="switch-block">
+							<h4>Background</h4>
+							<div class="btnSwitch">
+								<button type="button" class="changeBackgroundColor" data-color="bg2"></button>
+								<button type="button" class="changeBackgroundColor selected" data-color="bg1"></button>
+								<button type="button" class="changeBackgroundColor" data-color="bg3"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="custom-toggle">
+					<i class="flaticon-settings"></i>
+				</div>
+			</div>
+		<!-- End Custom template -->
+	</div>
+	<!--   Core JS Files   -->
+	<script>
+	$('#alert_demo_3_3').click(function(e) {
+		swal("Sucesso!", "Os dados foram guardados com sucesso!", {
+			icon : "success",
+			buttons: {        			
+				confirm: {
+				className : 'btn btn-success'
+				}
+			},
+		});
+	});</script>
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="assets/js/core/popper.min.js"></script>
+	<script src="assets/js/core/bootstrap.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	<!-- Moment JS -->
+	<script src="assets/js/plugin/moment/moment.min.js"></script><!-- DateTimePicker -->
+	<script src="assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
+	<!-- Bootstrap Toggle -->
+	<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+	<script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+	<!-- jQuery Scrollbar -->
+	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="assets/js/simple-datatables.js"></script>
+	<!-- Azzara JS -->
+	<script src="assets/js/ready.min.js"></script>
+	<!-- Azzara DEMO methods, don't include it in your project! -->
+	<script src="assets/js/setting-demo.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/bootstrap.min.js.map"></script>
+	<script>
+		$('#datepicker').datetimepicker({
+			format: 'MM/DD/YYYY',
+		});
+	</script>
+</body>
+</html>
